@@ -1,0 +1,20 @@
+services:
+    iscsi_target:
+        build:
+            context: .
+        environment:
+            - VOLPATH=/dev/zvol/rpool
+            - IQN=iqn.2024-09.ru.vmhouse.iscsi
+        devices:
+            - /dev/zvol/rpool/zvol02
+            - /dev/zvol/rpool/zvol03
+            - /dev/zvol/rpool/zvol04
+            - /dev/zvol/rpool/zvol05
+            - /dev/zvol/rpool/zvol06
+            - /dev/zvol/rpool/zvol07
+            - /dev/zvol/rpool/zvol08
+            - /dev/zvol/rpool/zvol09
+            - /dev/zvol/rpool/zvol10
+            - /dev/zvol/rpool/zvol11
+            - /dev/zvol/rpool/zvol12
+
